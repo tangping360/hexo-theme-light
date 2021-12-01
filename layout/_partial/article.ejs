@@ -17,8 +17,9 @@
         <%- item.content %>
       <% } %>
     </div>
-    <footer>
+    <!--<footer>-->
       <% if (index){ %>
+        <!--
         <% if (item.excerpt){ %>
           <div class="alignleft">
             <a href="<%- url_for(item.path) %>#more" class="more-link"><%= theme.excerpt_link %></a>
@@ -29,13 +30,16 @@
           <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
         </div>
         <% } %>
+        -->
       <% } else { %>
+        <footer>
         <%- partial('post/category') %>
         <%- partial('post/tag') %>
         <%- partial('post/share') %>
+        </footer>
       <% } %>
       <div class="clearfix"></div>
-    </footer>
+    <!--</footer>-->
   </div>
 </article>
 
